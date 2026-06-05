@@ -230,122 +230,142 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                    <!-- Struktur Pelaporan -->
-                    <div class="bg-lspd-card rounded-xl p-6 border border-slate-700 shadow-lg">
-                        <h3 class="text-xl font-bold text-lspd-gold mb-4"><i class="fa-solid fa-tower-broadcast mr-2"></i> Struktur Pelaporan Radio</h3>
-                        <p class="text-slate-300 mb-3 text-sm">Format wajib update situasi di radio (Standard Pamanahrasa Notes):</p>
-                        <div class="bg-lspd-navy p-3 rounded text-xs text-slate-200 font-mono mb-4 border border-slate-600">
-                            <span class="text-blue-400">Action (Tindakan)</span> — <span class="text-green-400">Arah (N/S/E/W)</span> — <span class="text-yellow-400">Nama Jalan</span> — <span class="text-purple-400">Info Tambahan</span>
-                        </div>
-                        <div class="space-y-3 text-sm">
-                            <div class="bg-lspd-dark p-3 rounded border border-slate-600">
-                                <strong class="text-white block mb-1">Initial Report:</strong> 
-                                <span class="italic text-slate-300">"Dispatch, 71 Adam 102 would be doing 10-55 situation on Vespucci Blvd, 10-60 gonna be black Kuruma with 2 occupants inside. Standby for future updates."</span>
+                <!-- Main Layout Container for Radio Page -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
+                    
+                    <!-- LEFT COLUMN -->
+                    <div class="space-y-8">
+                        <!-- Struktur Pelaporan -->
+                        <div class="bg-lspd-card rounded-xl p-6 border border-slate-700 shadow-lg">
+                            <h3 class="text-xl font-bold text-lspd-gold mb-4"><i class="fa-solid fa-tower-broadcast mr-2"></i> How to Use 10-Codes / Response Codes on Radio</h3>
+                            <div class="space-y-4 text-sm">
+                                <div class="bg-lspd-dark p-3 rounded border border-slate-600">
+                                    <strong class="text-white block mb-1 text-lspd-gold">Initial Reporting — Contoh:</strong> 
+                                    <span class="italic text-slate-300">"Dispatch, [callsign kalian] would be doing 10-55 situation on [nama jalan], 10-60 gonna be [deskripsi kendaraan] with [jumlah penumpang] occupants inside. Standby for future updates."</span>
+                                </div>
+                                <div class="bg-lspd-dark p-3 rounded border border-slate-600">
+                                    <strong class="text-white block mb-1 text-lspd-gold">Updating the Situation — Contoh:</strong> 
+                                    <span class="italic text-slate-300 mb-2 block">"Dispatch, for the last 10-55 situation on [nama jalan], it's now changing into active 10-57 (pursuit). Requesting 10-78 (backup) on my 20 (location). Suspect is now heading [arah pelarian]."</span>
+                                    <strong class="text-white block mt-2 mb-1">Detail:</strong>
+                                    <span class="italic text-slate-300">"Suspect is now heading West on Vespucci Blvd, taking left on intersection, heading South on San Andreas Ave."</span>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-2">Update structure:</strong>
+                                    <ul class="list-disc pl-5 text-slate-300 text-xs space-y-1">
+                                        <li><span class="text-blue-400 font-bold">Action (Tindakan)</span> — contoh: heading / belok kiri</li>
+                                        <li><span class="text-green-400 font-bold">Arah mata angin</span> — North / South / East / West</li>
+                                        <li><span class="text-yellow-400 font-bold">Nama jalan</span> — lokasi atau jalur</li>
+                                        <li><span class="text-purple-400 font-bold">Informasi tambahan (opsional)</span> — landmark, lalu lintas, deskripsi suspect</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-slate-800 p-3 rounded border border-slate-600 mt-2">
+                                    <strong class="text-white block mb-1 border-b border-slate-600 pb-1">How to Use Callsign:</strong>
+                                    <p class="text-slate-300 text-xs mt-2 mb-1">Misal badge number Pamanahrasa itu <span class="text-lspd-gold font-bold">71102</span></p>
+                                    <ul class="list-disc pl-5 text-slate-300 text-xs space-y-1">
+                                        <li>Jika sendiri (lincoln): <strong class="text-white">71 Lincoln 102</strong></li>
+                                        <li>Dengan partner (adam): <strong class="text-white">71 Adam 102</strong></li>
+                                    </ul>
+                                    <p class="text-slate-400 text-[10px] mt-2 italic">*71 itu station kalian</p>
+                                </div>
                             </div>
-                            <div class="bg-lspd-dark p-3 rounded border border-slate-600">
-                                <strong class="text-white block mb-1">Pursuit Update (Call-out):</strong> 
-                                <span class="italic text-slate-300">"Suspect is now heading West on Vespucci Blvd, taking left on intersection, heading South on San Andreas Ave."</span>
+                        </div>
+
+                        <!-- 10-Codes List (Adjusted to exact specifications) -->
+                        <div class="bg-lspd-dark rounded-xl shadow-lg border border-slate-700 overflow-hidden">
+                            <div class="bg-lspd-card px-4 py-3 border-b border-slate-700">
+                                <h3 class="font-bold text-white"><i class="fa-solid fa-list-ol text-lspd-gold mr-2"></i> Ten-Codes</h3>
+                            </div>
+                            <div class="h-[400px] overflow-y-auto">
+                                <table class="w-full text-sm text-left">
+                                    <tbody class="text-slate-300">
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white w-24">10-1</td><td class="px-4 py-2">Meet me at _ / Temui saya di_</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-2</td><td class="px-4 py-2">Good Signal / Sinyal Bagus</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-3</td><td class="px-4 py-2">Stop transmitting / Kosongkan frekuensi</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-4</td><td class="px-4 py-2">Roger that / Acknowledged</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-7</td><td class="px-4 py-2">Out of Service (Off Duty / Sementara)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-8</td><td class="px-4 py-2">In Service (Siap bertugas)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-10</td><td class="px-4 py-2">Fight in progress / Keributan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-12</td><td class="px-4 py-2">Stand by / Bersiap</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-13A</td><td class="px-4 py-2 text-red-400 font-bold">Officer Down! (Tertembak/Darurat)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-13B</td><td class="px-4 py-2 text-orange-400">Officer Down (Kecelakaan/Pingsan)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-14</td><td class="px-4 py-2 text-red-400">EMS down / Petugas Medis Tumbang</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-18</td><td class="px-4 py-2">Quickly / Segera lakukan cepat</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-20</td><td class="px-4 py-2">Lokasi saat ini</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-22</td><td class="px-4 py-2">Cancel / Batalkan instruksi</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-23</td><td class="px-4 py-2">Arriving on Location / Tiba di TKP</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-28</td><td class="px-4 py-2">Info plate / Informasi plat nomor kendaraan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-29</td><td class="px-4 py-2">Checking Criminal Records / Cek catatan kriminal</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-31A</td><td class="px-4 py-2 text-orange-400">House Robbery / Perampokan Rumah</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-31B</td><td class="px-4 py-2 text-orange-400">Store Robbery in Progress</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-32</td><td class="px-4 py-2 text-red-400 font-bold">Man with Firearms / Orang Bersenjata</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-purple-400">10-34</td><td class="px-4 py-2 text-purple-400">Suspicious Behaviour (Narcotics)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-37</td><td class="px-4 py-2">Suspicious Vehicle / Kendaraan Mencurigakan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-38</td><td class="px-4 py-2 text-red-400 font-bold">High Risk Stop / Felony Stop</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-41</td><td class="px-4 py-2">On Duty / Masuk Dinas</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-42</td><td class="px-4 py-2">Off Duty / Keluar Dinas</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-45</td><td class="px-4 py-2">Illegal Hunting / Perburuan Liar</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-47</td><td class="px-4 py-2">Injured Person / Korban Cedera</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-50</td><td class="px-4 py-2">Vehicle Accident / Tabrakan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-52</td><td class="px-4 py-2 text-red-400">EMS Needed / Butuh Medis segera</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-55</td><td class="px-4 py-2">Traffic Stop Biasa</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400 font-bold">10-57</td><td class="px-4 py-2 text-orange-400 font-bold">Chase in progress / Pengejaran Aktif</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-60</td><td class="px-4 py-2">Deskripsi Kendaraan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-61</td><td class="px-4 py-2">Deskripsi Subjek/Orang</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-70</td><td class="px-4 py-2 text-red-400 font-bold">Fire in progress / Kebakaran</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-71</td><td class="px-4 py-2 text-red-400 font-bold">Gang War / Shootout</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-74</td><td class="px-4 py-2">Negative / Tidak Setuju / Salah</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-76</td><td class="px-4 py-2">En route / Dalam Perjalanan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-77</td><td class="px-4 py-2">Need Assistance (Not Emergency / Backup Rutin)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-78</td><td class="px-4 py-2 text-red-400 font-bold">Need Assistance (Emergency / Backup Segera)</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-80</td><td class="px-4 py-2 text-red-400 font-bold">Officer in Danger, can't respond / Polisi dalam Bahaya</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400 font-bold">10-89</td><td class="px-4 py-2 text-orange-400 font-bold">Bomb Threat / Ancaman Bom</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-90</td><td class="px-4 py-2 text-orange-400 font-bold">Bank/Jewel Robbery in Progress</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-94</td><td class="px-4 py-2">Drag Racing / Balapan Liar</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-95</td><td class="px-4 py-2">Suspect in Custody</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400 font-bold">10-97</td><td class="px-4 py-2 text-orange-400 font-bold">Unauthorized access / Penyelusupan</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-98</td><td class="px-4 py-2 text-red-400 font-bold">Jailbreak / Pelarian Penjara</td></tr>
+                                        <tr><td class="px-4 py-2 font-mono font-bold text-white">10-99</td><td class="px-4 py-2">Situation Concluded / Aman</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Phonetic Alphabet -->
-                    <div class="bg-lspd-card rounded-xl p-6 border border-slate-700 shadow-lg">
-                        <h3 class="text-xl font-bold text-lspd-gold mb-4"><i class="fa-solid fa-spell-check mr-2"></i> Phonetic Alphabet</h3>
-                        <div class="grid grid-cols-3 gap-2 text-xs text-slate-300">
-                            <div><strong class="text-white">A:</strong> Adam</div>
-                            <div><strong class="text-white">J:</strong> John</div>
-                            <div><strong class="text-white">S:</strong> Sam</div>
-                            <div><strong class="text-white">B:</strong> Boy</div>
-                            <div><strong class="text-white">K:</strong> King</div>
-                            <div><strong class="text-white">T:</strong> Tom</div>
-                            <div><strong class="text-white">C:</strong> Charles</div>
-                            <div><strong class="text-white">L:</strong> Lincoln</div>
-                            <div><strong class="text-white">U:</strong> Union</div>
-                            <div><strong class="text-white">D:</strong> David</div>
-                            <div><strong class="text-white">M:</strong> Mary</div>
-                            <div><strong class="text-white">V:</strong> Victor</div>
-                            <div><strong class="text-white">E:</strong> Edward</div>
-                            <div><strong class="text-white">N:</strong> Nora</div>
-                            <div><strong class="text-white">W:</strong> William</div>
-                            <div><strong class="text-white">F:</strong> Frank</div>
-                            <div><strong class="text-white">O:</strong> Ocean</div>
-                            <div><strong class="text-white">X:</strong> X-Ray</div>
-                            <div><strong class="text-white">G:</strong> George</div>
-                            <div><strong class="text-white">P:</strong> Paul</div>
-                            <div><strong class="text-white">Y:</strong> Young</div>
-                            <div><strong class="text-white">H:</strong> Henry</div>
-                            <div><strong class="text-white">Q:</strong> Queen</div>
-                            <div><strong class="text-white">Z:</strong> Zebra</div>
-                            <div><strong class="text-white">I:</strong> Ida</div>
-                            <div><strong class="text-white">R:</strong> Robert</div>
+                    <!-- RIGHT COLUMN -->
+                    <div class="space-y-8">
+                        <!-- Phonetic Alphabet -->
+                        <div class="bg-lspd-card rounded-xl p-6 border border-slate-700 shadow-lg">
+                            <h3 class="text-xl font-bold text-lspd-gold mb-4"><i class="fa-solid fa-spell-check mr-2"></i> Phonetic Alphabet</h3>
+                            <div class="grid grid-cols-3 gap-2 text-xs text-slate-300">
+                                <div><strong class="text-white">A:</strong> Adam</div>
+                                <div><strong class="text-white">J:</strong> John</div>
+                                <div><strong class="text-white">S:</strong> Sam</div>
+                                <div><strong class="text-white">B:</strong> Boy</div>
+                                <div><strong class="text-white">K:</strong> King</div>
+                                <div><strong class="text-white">T:</strong> Tom</div>
+                                <div><strong class="text-white">C:</strong> Charles</div>
+                                <div><strong class="text-white">L:</strong> Lincoln</div>
+                                <div><strong class="text-white">U:</strong> Union</div>
+                                <div><strong class="text-white">D:</strong> David</div>
+                                <div><strong class="text-white">M:</strong> Mary</div>
+                                <div><strong class="text-white">V:</strong> Victor</div>
+                                <div><strong class="text-white">E:</strong> Edward</div>
+                                <div><strong class="text-white">N:</strong> Nora</div>
+                                <div><strong class="text-white">W:</strong> William</div>
+                                <div><strong class="text-white">F:</strong> Frank</div>
+                                <div><strong class="text-white">O:</strong> Ocean</div>
+                                <div><strong class="text-white">X:</strong> X-Ray</div>
+                                <div><strong class="text-white">G:</strong> George</div>
+                                <div><strong class="text-white">P:</strong> Paul</div>
+                                <div><strong class="text-white">Y:</strong> Young</div>
+                                <div><strong class="text-white">H:</strong> Henry</div>
+                                <div><strong class="text-white">Q:</strong> Queen</div>
+                                <div><strong class="text-white">Z:</strong> Zebra</div>
+                                <div><strong class="text-white">I:</strong> Ida</div>
+                                <div><strong class="text-white">R:</strong> Robert</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                    <!-- 10-Codes List (Adjusted to exact specifications) -->
-                    <div class="bg-lspd-dark rounded-xl shadow-lg border border-slate-700 overflow-hidden">
-                        <div class="bg-lspd-card px-4 py-3 border-b border-slate-700">
-                            <h3 class="font-bold text-white"><i class="fa-solid fa-list-ol text-lspd-gold mr-2"></i> Ten-Codes Resmi LSPD IME</h3>
-                        </div>
-                        <div class="h-[400px] overflow-y-auto">
-                            <table class="w-full text-sm text-left">
-                                <tbody class="text-slate-300">
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white w-24">10-1</td><td class="px-4 py-2">Meet me at _ / Temui saya di_</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-2</td><td class="px-4 py-2">Good Signal / Sinyal Bagus</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-3</td><td class="px-4 py-2">Stop transmitting / Kosongkan frekuensi</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-4</td><td class="px-4 py-2">Roger that / Acknowledged</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-7</td><td class="px-4 py-2">Out of Service (Off Duty / Sementara)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-8</td><td class="px-4 py-2">In Service (Siap bertugas)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-10</td><td class="px-4 py-2">Fight in progress / Keributan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-12</td><td class="px-4 py-2">Stand by / Bersiap</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-13A</td><td class="px-4 py-2 text-red-400 font-bold">Officer Down! (Tertembak/Darurat)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-13B</td><td class="px-4 py-2 text-orange-400">Officer Down (Kecelakaan/Pingsan)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-14</td><td class="px-4 py-2 text-red-400">EMS down / Petugas Medis Tumbang</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-18</td><td class="px-4 py-2">Quickly / Segera lakukan cepat</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-20</td><td class="px-4 py-2">Lokasi saat ini</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-22</td><td class="px-4 py-2">Cancel / Batalkan instruksi</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-23</td><td class="px-4 py-2">Arriving on Location / Tiba di TKP</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-28</td><td class="px-4 py-2">Info plate / Informasi plat nomor kendaraan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-29</td><td class="px-4 py-2">Checking Criminal Records / Cek catatan kriminal</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-31A</td><td class="px-4 py-2 text-orange-400">House Robbery / Perampokan Rumah</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-31B</td><td class="px-4 py-2 text-orange-400">Store Robbery in Progress</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-32</td><td class="px-4 py-2 text-red-400 font-bold">Man with Firearms / Orang Bersenjata</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-purple-400">10-34</td><td class="px-4 py-2 text-purple-400">Suspicious Behaviour (Narcotics)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-37</td><td class="px-4 py-2">Suspicious Vehicle / Kendaraan Mencurigakan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-38</td><td class="px-4 py-2 text-red-400 font-bold">High Risk Stop / Felony Stop</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-41</td><td class="px-4 py-2">On Duty / Masuk Dinas</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-42</td><td class="px-4 py-2">Off Duty / Keluar Dinas</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-45</td><td class="px-4 py-2">Illegal Hunting / Perburuan Liar</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-47</td><td class="px-4 py-2">Injured Person / Korban Cedera</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-50</td><td class="px-4 py-2">Vehicle Accident / Tabrakan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400">10-52</td><td class="px-4 py-2 text-red-400">EMS Needed / Butuh Medis segera</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-55</td><td class="px-4 py-2">Traffic Stop Biasa</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400 font-bold">10-57</td><td class="px-4 py-2 text-orange-400 font-bold">Chase in progress / Pengejaran Aktif</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-60</td><td class="px-4 py-2">Deskripsi Kendaraan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-61</td><td class="px-4 py-2">Deskripsi Subjek/Orang</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-70</td><td class="px-4 py-2 text-red-400 font-bold">Fire in progress / Kebakaran</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-71</td><td class="px-4 py-2 text-red-400 font-bold">Gang War / Shootout</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-74</td><td class="px-4 py-2">Negative / Tidak Setuju / Salah</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-76</td><td class="px-4 py-2">En route / Dalam Perjalanan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-77</td><td class="px-4 py-2">Need Assistance (Not Emergency / Backup Rutin)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-78</td><td class="px-4 py-2 text-red-400 font-bold">Need Assistance (Emergency / Backup Segera)</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-80</td><td class="px-4 py-2 text-red-400 font-bold">Officer in Danger, can't respond / Polisi dalam Bahaya</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400 font-bold">10-89</td><td class="px-4 py-2 text-orange-400 font-bold">Bomb Threat / Ancaman Bom</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400">10-90</td><td class="px-4 py-2 text-orange-400 font-bold">Bank/Jewel Robbery in Progress</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-94</td><td class="px-4 py-2">Drag Racing / Balapan Liar</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-95</td><td class="px-4 py-2">Suspect in Custody</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-orange-400 font-bold">10-97</td><td class="px-4 py-2 text-orange-400 font-bold">Unauthorized access / Penyelusupan</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white text-red-400 font-bold">10-98</td><td class="px-4 py-2 text-red-400 font-bold">Jailbreak / Pelarian Penjara</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono font-bold text-white">10-99</td><td class="px-4 py-2">Situation Concluded / Aman</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
                         <!-- Callsigns & Response -->
                         <div class="bg-lspd-dark rounded-xl shadow-lg border border-slate-700 overflow-hidden">
                             <div class="bg-lspd-card px-4 py-3 border-b border-slate-700 flex justify-between">
@@ -354,7 +374,7 @@
                             </div>
                             <div class="p-4 grid grid-cols-2 gap-4">
                                 <div class="space-y-2 text-xs">
-                                    <div class="bg-lspd-navy p-1.5 rounded border border-slate-600"><span class="text-lspd-gold font-bold">STAFF</span> High Command (71-SASP-01)</div>
+                                    <div class="bg-lspd-navy p-1.5 rounded border border-slate-600"><span class="text-lspd-gold font-bold">STAFF</span> High Command</div>
                                     <div class="bg-lspd-navy p-1.5 rounded border border-slate-600"><span class="text-lspd-gold font-bold">VICTOR</span> Command Staff</div>
                                     <div class="bg-lspd-navy p-1.5 rounded border border-slate-600"><span class="text-lspd-gold font-bold">ADAM</span> Berpasangan (2 Officer)</div>
                                     <div class="bg-lspd-navy p-1.5 rounded border border-slate-600"><span class="text-lspd-gold font-bold">LINCOLN</span> Solo Patrol (1 Officer)</div>
@@ -1226,7 +1246,7 @@
 
         // SPA Tab Switching Logic
         const pageTitles = {
-            'beranda': 'Beranda LSPD IME',
+            'beranda': 'Beranda LSPD',
             'radio': 'Komunikasi & Kode Radio',
             'taktis': 'SOP & Prosedur Taktis',
             'ic': 'Incident Command',
