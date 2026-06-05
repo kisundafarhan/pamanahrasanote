@@ -61,6 +61,39 @@
         /* Toast Notification */
         #toast { visibility: hidden; min-width: 250px; background-color: #eab308; color: #0f172a; text-align: center; border-radius: 4px; padding: 16px; position: fixed; z-index: 50; left: 50%; bottom: 30px; font-weight: bold; font-size: 14px; transform: translateX(-50%); opacity: 0; transition: opacity 0.3s, visibility 0.3s; }
         #toast.show { visibility: visible; opacity: 1; }
+
+        /* Print Styling */
+        @media print {
+            @page { margin: 1cm; }
+            body { background-color: #fff !important; color: #000 !important; overflow: visible !important; height: auto !important; }
+            aside, header, .print-btn, #toast { display: none !important; }
+            main { background: none !important; padding: 0 !important; overflow: visible !important; display: block !important; }
+            .page-content { display: none !important; }
+            .page-content.active { display: block !important; animation: none !important; }
+            
+            /* Clean up backgrounds for print */
+            .bg-lspd-navy, .bg-lspd-dark, .bg-lspd-card, .bg-slate-800, .bg-slate-900, .bg-slate-800\\/50 { 
+                background-color: transparent !important; 
+                border: 1px solid #ccc !important; 
+                box-shadow: none !important; 
+            }
+            
+            /* Text color overrides */
+            .text-white, .text-slate-200, .text-slate-300, .text-slate-400 { color: #000 !important; }
+            .text-lspd-gold { color: #856404 !important; font-weight: bold; }
+            .text-red-400, .text-red-500 { color: #b91c1c !important; }
+            .text-blue-400 { color: #1d4ed8 !important; }
+            .text-green-400 { color: #15803d !important; }
+            .text-orange-400 { color: #c2410c !important; }
+            .text-purple-400 { color: #7e22ce !important; }
+
+            /* Accordions expand for printing */
+            .accordion-content { max-height: none !important; display: block !important; overflow: visible !important; padding: 1rem !important; }
+            .accordion-button .fa-chevron-down { display: none !important; }
+            
+            .print-watermark { border-top: 1px solid #ccc !important; color: #555 !important; padding-top: 15px !important; margin-top: 40px !important; }
+            ::-webkit-scrollbar { display: none; }
+        }
     </style>
 </head>
 <body class="flex h-screen overflow-hidden antialiased selection:bg-lspd-gold selection:text-lspd-navy">
@@ -176,10 +209,21 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 2. KOMUNIKASI RADIO -->
             <div id="page-radio" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <div class="mb-8">
                     <p class="text-slate-300 leading-relaxed bg-lspd-dark p-4 rounded-lg border-l-4 border-lspd-gold shadow">
                         Komunikasi radio adalah senjata utama Anda. Informasi yang jelas, padat, dan akurat dapat menyelamatkan nyawa. Pelajari dan biasakan menggunakan Ten-Codes serta Phonetic Alphabet.
@@ -354,10 +398,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 3. PROSEDUR TAKTIS -->
             <div id="page-taktis" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <p class="text-slate-300 mb-6 bg-lspd-dark p-4 rounded-lg border-l-4 border-lspd-gold">
                     SOP Taktis wajib dipatuhi untuk memastikan keamanan Officer dan masyarakat. Pelanggaran SOP dapat berakibat fatal secara operasional maupun administratif (Strike).
                 </p>
@@ -510,10 +565,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 4. INCIDENT COMMAND -->
             <div id="page-ic" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <div class="bg-lspd-card rounded-xl p-8 border-l-4 border-lspd-gold shadow-lg mb-8 relative">
                     <i class="fa-solid fa-quote-left absolute text-5xl text-slate-600 opacity-30 top-4 left-4"></i>
                     <p class="text-xl text-white font-medium italic z-10 relative leading-relaxed pl-8">
@@ -581,10 +647,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 5. PROSES HUKUM -->
             <div id="page-hukum" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <div class="bg-lspd-dark rounded-xl p-8 border border-slate-700 shadow-lg">
                     <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
                         <i class="fa-solid fa-scale-balanced text-lspd-gold mr-3"></i> Hak Miranda (Miranda Rights)
@@ -645,10 +722,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 5B. COURT VERDICT -->
             <div id="page-court" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <div class="bg-lspd-dark rounded-xl p-8 border border-slate-700 shadow-lg text-center">
                     <h3 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-scale-unbalanced text-blue-400 mr-3"></i> Alur Court Verdict</h3>
                     <p class="text-slate-400 mb-8 text-sm max-w-2xl mx-auto">SOP penanganan hukum ketika tersangka menyatakan "Not Guilty" dan meminta sidang/mediasi pengacara.</p>
@@ -717,6 +805,11 @@
 
                     </div>
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 5C. PENAL CODE CHEAT -->
@@ -726,7 +819,12 @@
                         <h2 class="text-2xl font-bold text-white">Penal Code Quick Reference</h2>
                         <p class="text-slate-400 text-sm">Gunakan cheat sheet ini sebagai acuan cepat pengisian dakwaan MDT.</p>
                     </div>
-                    <i class="fa-solid fa-book-skull text-4xl text-red-400 opacity-50"></i>
+                    <div class="flex items-center gap-4">
+                        <button onclick="window.print()" class="print-btn px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                            <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                        </button>
+                        <i class="fa-solid fa-book-skull text-4xl text-red-400 opacity-50 hidden md:block"></i>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -834,10 +932,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 6. KUALIFIKASI PROMOSI -->
             <div id="page-promosi" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <p class="text-slate-300 mb-8 bg-lspd-dark p-4 rounded-lg border-l-4 border-lspd-gold shadow text-center max-w-3xl mx-auto">
                     Kenaikan pangkat dalam tubuh Los Santos Police Department didasarkan penuh atas jam terbang, disiplin, kepemimpinan taktis, serta kepatuhan administratif penyusunan Patrol Report.
                 </p>
@@ -913,10 +1022,21 @@
                     </div>
 
                 </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
+                </div>
             </div>
 
             <!-- 7. LAPORAN PATROLI -->
             <div id="page-laporan" class="page-content">
+                <div class="flex justify-end mb-4 print-btn">
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-lg shadow transition text-xs font-bold flex items-center">
+                        <i class="fa-solid fa-print mr-2 text-lspd-gold"></i> Cetak Dokumen / Save as PDF
+                    </button>
+                </div>
+
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     
                     <!-- BBCode Copy Section & Auto Generator -->
@@ -1068,6 +1188,11 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Watermark Footer -->
+                <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
+                    Handbook Compiled by Pamanahrasa &copy; LSPD
                 </div>
             </div>
 
