@@ -182,7 +182,7 @@
         </header>
 
         <!-- Pages Container -->
-        <div class="p-4 md:p-8 max-w-7xl mx-auto w-full pb-20">
+        <div class="p-4 md:p-8 max-w-7xl mx-auto w-full pb-28 md:pb-20">
 
             <!-- 1. BERANDA -->
             <div id="page-beranda" class="page-content active">
@@ -210,7 +210,7 @@
                         </div>
 
                         <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-lg mb-8">
-                            Selamat datang di Kepolisian Los Santos. Handbook ini adalah panduan lapangan mutlak Anda ("If it's not written, it didn't happen"). Pelajari 10-Codes, pahami rantai komando, dan ingat tanggung jawab Anda di jalanan. Lencana yang Anda kenakan adalah simbol kepercayaan kota ini. Bertugaslah dengan integritas, ketegasan, dan keselamatan.
+                            Selamat datang di Kepolisian Los Santos. Handbook ini adalah panduan lapangan Anda ("If it's not written, it didn't happen"). Pelajari 10-Codes, pahami rantai komando, dan ingat tanggung jawab Anda di lapangan. Lencana yang Anda kenakan adalah simbol kepercayaan kota ini. Bertugaslah dengan integritas, ketegasan, dan keselamatan.
                         </p>
 
                         <div class="mt-8 flex justify-center space-x-4">
@@ -918,7 +918,7 @@
                                 <h4 class="text-purple-300 font-bold">Suspect Possession (Jika Membawa)</h4>
                                 <ul class="list-disc pl-5 text-xs text-slate-300 space-y-1">
                                     <li>Possession of schedule I atau II (narkoba mereka)</li>
-                                    <li>Possession of BulletProof Vest (Kelepon)</li>
+                                    <li>Possession of BulletProof Vest</li>
                                     <li>Possession of ammunition / Distribution</li>
                                     <li>Possession of Illegal Money (Duit Merah)</li>
                                     <li>Criminal possession of a firearm (class 1/2/3)</li>
@@ -979,7 +979,7 @@
                 </div>
 
                 <p class="text-slate-300 mb-8 bg-lspd-dark p-4 rounded-lg border-l-4 border-lspd-gold shadow text-center max-w-3xl mx-auto">
-                    Kenaikan pangkat dalam tubuh Los Santos Police Department didasarkan penuh atas jam terbang, disiplin, kepemimpinan taktis, serta kepatuhan administratif penyusunan Patrol Report.
+                    Kenaikan pangkat di Los Santos Police Department didasarkan penuh atas jam terbang, disiplin, kepemimpinan taktis, serta kepatuhan administratif penyusunan Patrol Report.
                 </p>
 
                 <div class="max-w-4xl mx-auto space-y-6 relative">
@@ -1230,6 +1230,17 @@
         </div>
     </main>
 
+    <!-- Mobile Sticky Navigation -->
+    <div id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 bg-lspd-navy/95 backdrop-blur border-t border-slate-700 p-3 flex justify-between items-center z-40 md:hidden print-btn shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
+        <button id="btn-mobile-prev" onclick="navigateSequential('prev')" class="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm font-bold border border-slate-600 disabled:opacity-50 disabled:cursor-not-allowed flex items-center transition-colors hover:text-white">
+            <i class="fa-solid fa-arrow-left mr-2"></i> <span class="hidden sm:inline">Prev</span>
+        </button>
+        <span id="mobile-nav-indicator" class="text-xs text-lspd-gold font-bold uppercase tracking-wider bg-slate-800 px-3 py-1 rounded-full border border-slate-600 shadow-inner">1 / 9</span>
+        <button id="btn-mobile-next" onclick="navigateSequential('next')" class="px-4 py-2 bg-lspd-gold text-lspd-navy rounded-lg text-sm font-bold border border-lspd-goldHover disabled:opacity-50 disabled:cursor-not-allowed flex items-center transition-colors hover:bg-lspd-goldHover">
+            <span class="hidden sm:inline">Next</span> <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+    </div>
+
     <!-- Custom Toast Notification -->
     <div id="toast">BBCode Berhasil Disalin ke Clipboard!</div>
 
@@ -1286,6 +1297,62 @@
             'laporan': 'Sistem Laporan Patroli'
         };
 
+        // Setup Sequential Navigation
+        const tabOrder = ['beranda', 'radio', 'taktis', 'ic', 'hukum', 'court', 'penal', 'promosi', 'laporan'];
+        let currentTabIndex = 0;
+
+        function injectSectionNavigation() {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                const watermark = page.querySelector('.print-watermark');
+                if (watermark) {
+                    const navHtml = `
+                        <!-- Section Navigation -->
+                        <div class="mt-8 flex justify-between items-center print-btn">
+                            <button onclick="navigateSequential('prev')" class="btn-prev px-4 py-2 bg-slate-800 text-slate-300 hover:text-white rounded-lg text-sm font-bold border border-slate-600 hover:bg-slate-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Previous
+                            </button>
+                            <button onclick="navigateSequential('next')" class="btn-next px-4 py-2 bg-lspd-gold text-lspd-navy rounded-lg text-sm font-bold hover:bg-lspd-goldHover transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center shadow-md">
+                                Next <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    `;
+                    watermark.insertAdjacentHTML('beforebegin', navHtml);
+                }
+            });
+        }
+
+        function navigateSequential(direction) {
+            if (direction === 'prev' && currentTabIndex > 0) {
+                switchTab(tabOrder[currentTabIndex - 1]);
+            } else if (direction === 'next' && currentTabIndex < tabOrder.length - 1) {
+                switchTab(tabOrder[currentTabIndex + 1]);
+            }
+        }
+        
+        function updateNavigationButtons() {
+            const isFirst = currentTabIndex === 0;
+            const isLast = currentTabIndex === tabOrder.length - 1;
+
+            document.querySelectorAll('.btn-prev').forEach(btn => {
+                btn.disabled = isFirst;
+            });
+            document.querySelectorAll('.btn-next').forEach(btn => {
+                btn.disabled = isLast;
+            });
+
+            // Update mobile floating nav
+            const mobilePrev = document.getElementById('btn-mobile-prev');
+            const mobileNext = document.getElementById('btn-mobile-next');
+            if (mobilePrev) mobilePrev.disabled = isFirst;
+            if (mobileNext) mobileNext.disabled = isLast;
+            
+            const mobileIndicator = document.getElementById('mobile-nav-indicator');
+            if (mobileIndicator) {
+                mobileIndicator.innerText = `${currentTabIndex + 1} / ${tabOrder.length}`;
+            }
+        }
+
         function switchTab(tabId) {
             // Hide all pages
             const pages = document.querySelectorAll('.page-content');
@@ -1315,6 +1382,16 @@
             const titleElement = document.getElementById('page-title');
             if(titleElement) {
                 titleElement.innerText = pageTitles[tabId];
+            }
+
+            // Update sequential navigation state
+            currentTabIndex = tabOrder.indexOf(tabId);
+            updateNavigationButtons();
+            
+            // Scroll to top automatically when switching sections
+            const mainContent = document.querySelector('main');
+            if (mainContent) {
+                mainContent.scrollTo({top: 0, behavior: 'smooth'});
             }
 
             // Close sidebar automatically on mobile after clicking a menu item
@@ -1403,7 +1480,7 @@ ${evidenceBBCode}
             document.getElementById('bbcode-template').value = template;
         }
 
-        // Copy BBCode Function with execCommand fallback
+        // Copy BBCode Function
         function copyBBCode() {
             const textarea = document.getElementById('bbcode-template');
             textarea.select();
@@ -1424,6 +1501,10 @@ ${evidenceBBCode}
             toast.className = "show";
             setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
         }
+
+        // Initialize sequential navigation buttons on load
+        injectSectionNavigation();
+        updateNavigationButtons();
     </script>
 </body>
 </html>
