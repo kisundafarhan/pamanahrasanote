@@ -98,12 +98,18 @@
 </head>
 <body class="flex h-screen overflow-hidden antialiased selection:bg-lspd-gold selection:text-lspd-navy">
 
+    <!-- Mobile Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-30 hidden backdrop-blur-sm transition-opacity duration-300 opacity-0 md:hidden" onclick="toggleSidebar()"></div>
+
     <!-- Sidebar Navigation -->
-    <aside class="w-64 bg-lspd-dark flex flex-col h-full shadow-2xl z-20 flex-shrink-0">
+    <aside id="sidebar" class="w-64 bg-lspd-dark flex flex-col h-full shadow-2xl z-40 flex-shrink-0 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 ease-in-out">
         <!-- Logo Area -->
-        <div class="h-20 flex items-center justify-center border-b border-slate-700 bg-lspd-navy">
+        <div class="h-20 flex items-center justify-center border-b border-slate-700 bg-lspd-navy relative">
             <img src="https://i.vgy.me/IhV1jB.png" alt="LSPD Logo" class="h-10 w-10 object-contain mr-2">
             <h1 class="text-xl font-bold tracking-wider text-white">LSPD</h1>
+            <button onclick="toggleSidebar()" class="md:hidden absolute right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
         </div>
         
         <!-- Menu Items -->
@@ -161,8 +167,13 @@
     <main class="flex-1 flex flex-col h-full bg-lspd-navy relative overflow-y-auto">
         
         <!-- Header -->
-        <header class="h-20 glass-header sticky top-0 z-10 flex items-center justify-between px-8">
-            <h2 id="page-title" class="text-2xl font-bold text-white tracking-wide">Beranda</h2>
+        <header class="h-20 glass-header sticky top-0 z-10 flex items-center justify-between px-4 md:px-8">
+            <div class="flex items-center">
+                <button onclick="toggleSidebar()" class="md:hidden text-slate-300 hover:text-white mr-4 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+                <h2 id="page-title" class="text-xl md:text-2xl font-bold text-white tracking-wide truncate max-w-[160px] sm:max-w-xs md:max-w-none">Beranda</h2>
+            </div>
             <div class="flex items-center space-x-4">
                 <div class="text-slate-400 text-sm">
                     <i class="fa-regular fa-clock mr-2"></i> <span id="current-time">00:00:00</span>
@@ -171,7 +182,7 @@
         </header>
 
         <!-- Pages Container -->
-        <div class="p-8 max-w-7xl mx-auto w-full pb-20">
+        <div class="p-4 md:p-8 max-w-7xl mx-auto w-full pb-20">
 
             <!-- 1. BERANDA -->
             <div id="page-beranda" class="page-content active">
@@ -1244,6 +1255,24 @@
             document.getElementById('displayOfficerBadge').innerText = badgeInput ? "Badge: #" + badgeInput : "Badge: ---";
         }
 
+        // Sidebar Toggle Logic for Mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('mobile-overlay');
+            
+            if (sidebar.classList.contains('-translate-x-full')) {
+                // Open sidebar
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+            } else {
+                // Close sidebar
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
         // SPA Tab Switching Logic
         const pageTitles = {
             'beranda': 'Beranda LSPD',
@@ -1286,6 +1315,14 @@
             const titleElement = document.getElementById('page-title');
             if(titleElement) {
                 titleElement.innerText = pageTitles[tabId];
+            }
+
+            // Close sidebar automatically on mobile after clicking a menu item
+            if (window.innerWidth < 768) {
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar && !sidebar.classList.contains('-translate-x-full')) {
+                    toggleSidebar();
+                }
             }
         }
 
