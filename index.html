@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -282,7 +283,7 @@
                         </div>
 
                         <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-lg mb-8">
-                            Selamat datang di Kepolisian Los Santos. Handbook ini adalah panduan lapangan Anda ("If it's not written, it didn't happen"). Pelajari 10-Codes, pahami rantai komando, dan ingat tanggung jawab Anda di lapangan. Lencana yang Anda kenakan adalah simbol kepercayaan kota ini. Bertugaslah dengan integritas, ketegasan, dan keselamatan.
+                            Selamat datang di Kepolisian Los Santos. Handbook ini adalah panduan lapangan Anda. Pelajari 10-Codes, pahami rantai komando, dan ingat tanggung jawab Anda di lapangan. Lencana yang Anda kenakan adalah simbol kepercayaan kota ini. Bertugaslah dengan integritas, ketegasan, dan keselamatan.
                         </p>
 
                         <div class="mt-8 flex justify-center space-x-4">
@@ -324,7 +325,7 @@
                             <div class="space-y-4 text-sm">
                                 <div class="bg-lspd-dark p-3 rounded border border-slate-600">
                                     <strong class="text-white block mb-1 text-lspd-gold">Laporan Awal (Initial Reporting) — Contoh:</strong> 
-                                    <span class="italic text-slate-300">"Dispatch, [callsign kalian] would be doing 10-55 situation on [nama jalan], 10-60 gonna be [deskripsi kendaraan] with [jumlah penumpang] occupants inside. Standby for future updates."</span>
+                                    <span class="italic text-slate-300">"Dispatch, [callsign kalian] would be doing 10-55 [situasi] on [nama jalan], 10-60 gonna be [deskripsi kendaraan] with [jumlah penumpang] occupants inside. Standby for future updates."</span>
                                 </div>
                                 <div class="bg-lspd-dark p-3 rounded border border-slate-600">
                                     <strong class="text-white block mb-1 text-lspd-gold">Memperbarui Situasi (Updating) — Contoh:</strong> 
@@ -730,7 +731,7 @@
                                     <h4 class="text-lspd-gold font-bold mb-1">Negosiasi</h4>
                                     <ul class="list-disc pl-5 text-xs text-slate-400 space-y-1">
                                         <li><strong class="text-white">Jika ada Sandera (Hostage):</strong> Mulai negosiasi taktis untuk menjamin keselamatan sandera. Tunggu keputusan dan instruksi dari Incident Commander (IC).</li>
-                                        <li><strong class="text-white">Jika TIDAK ada Sandera:</strong> Polisi diizinkan melakukan tindakan penerobosan langsung (*breach-in*) sesuai kesepakatan taktis dan aturan Robbery Matrix.</li>
+                                        <li><strong class="text-white">Jika TIDAK ada Sandera:</strong> Polisi diizinkan melakukan tindakan penerobosan langsung (*breach-in*) sesuai kesepakatis taktis dan aturan Robbery Matrix.</li>
                                     </ul>
                                 </div>
                                 <hr class="border-slate-700">
@@ -865,6 +866,154 @@
                                         <li>Unit cadangan (Backup) wajib segera bergerak masuk mengurung mobil target (*vehicle pinning*).</li>
                                         <li>Kecepatan ideal pengerjaan PIT yang aman bagi keselamatan berkendara berkisar antara <strong>40 hingga 55 MPH</strong>.</li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW SECTION: Prosedur Impound Sita -->
+                    <div class="bg-lspd-dark border border-slate-700 rounded-xl overflow-hidden">
+                        <button class="accordion-button w-full px-6 py-4 flex justify-between items-center hover:bg-lspd-card transition focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-lg text-white"><i class="fa-solid fa-building-shield text-amber-500 mr-3"></i>Prosedur Impound Sita (Sita Kendaraan)</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content bg-lspd-navy">
+                            <div class="p-6 text-slate-300 space-y-4 text-sm">
+                                <p class="text-slate-400">
+                                    Impound Sita dilakukan apabila kendaraan suspect berada di lokasi sebuah kasus dan diperlukan sebagai bagian dari proses penyelidikan atau pengamanan barang bukti.
+                                </p>
+                                
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-triangle-exclamation mr-1.5"></i> Kondisi Pelaksanaan Impound Sita</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs text-slate-400">
+                                        <li>Kendaraan suspect berada di lokasi sebuah kasus.</li>
+                                        <li>Kendaraan suspect masuk ke dalam air.</li>
+                                        <li>Suspect meninggalkan kendaraan dan berpindah ke kendaraan lain saat pengejaran (<i>changing vehicle during pursuit</i>).</li>
+                                        <li><strong class="text-white">Persetujuan Otoritas:</strong> Kendaraan hanya boleh dilakukan Impound Sita setelah mendapat persetujuan <span class="text-lspd-gold font-bold">Incident Commander (IC)</span>.</li>
+                                    </ul>
+                                </div>
+                                
+                                <hr class="border-slate-700">
+                                
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-magnifying-glass-location mr-1.5"></i> Langkah-Langkah Pengecekan Lapangan</h4>
+                                    <div class="relative pl-6 space-y-3 text-xs text-slate-300">
+                                        <div class="absolute left-1.5 top-1 bottom-1 w-0.5 bg-slate-600"></div>
+                                        
+                                        <div class="relative">
+                                            <div class="absolute -left-[21px] w-4 h-4 bg-slate-800 border border-lspd-gold rounded-full flex items-center justify-center font-bold text-[9px] text-white">1</div>
+                                            <p><strong>Cek Identitas Kendaraan:</strong> Tekan <strong class="text-white">F1 → Police Interaction → Next Page → Checking Vehicle</strong>.</p>
+                                        </div>
+                                        <div class="relative">
+                                            <div class="absolute -left-[21px] w-4 h-4 bg-slate-800 border border-lspd-gold rounded-full flex items-center justify-center font-bold text-[9px] text-white">2</div>
+                                            <p><strong>Dokumentasi Awal:</strong> Ambil foto kendaraan menggunakan mata satu dan tuliskan deskripsi kendaraan secara lengkap.</p>
+                                        </div>
+                                        <div class="relative">
+                                            <div class="absolute -left-[21px] w-4 h-4 bg-slate-800 border border-lspd-gold rounded-full flex items-center justify-center font-bold text-[9px] text-white">3</div>
+                                            <p><strong>Pemeriksaan Sistem MDT:</strong> Periksa database MDT mengenai plat nomor kendaraan, status kriminal, serta profil pemilik kendaraan.</p>
+                                        </div>
+                                        <div class="relative">
+                                            <div class="absolute -left-[21px] w-4 h-4 bg-slate-800 border border-lspd-gold rounded-full flex items-center justify-center font-bold text-[9px] text-white">4</div>
+                                            <p><strong>Pemeriksaan Fisik (Trunk & Glove Box):</strong> Gunakan mata satu untuk memeriksa Trunk (Bagasi) dan Glove Box.</p>
+                                        </div>
+                                        <div class="relative">
+                                            <div class="absolute -left-[21px] w-4 h-4 bg-slate-800 border border-lspd-gold rounded-full flex items-center justify-center font-bold text-[9px] text-white">5</div>
+                                            <p><strong>Pengumpulan Bukti Foto:</strong> Ambil foto seluruh isi bagasi/glove box serta foto utuh fisik kendaraan secara keseluruhan (termasuk plate number yang terlihat jelas).</p>
+                                        </div>
+                                        <div class="relative">
+                                            <div class="absolute -left-[21px] w-4 h-4 bg-slate-800 border border-lspd-gold rounded-full flex items-center justify-center font-bold text-[9px] text-white">6</div>
+                                            <p><strong>Penemuan Barang Ilegal:</strong> Wajib menggunakan sarung tangan taktis, amankan barang ilegal tersebut sebagai barang bukti resmi sesuai dengan prosedur evidence.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr class="border-slate-700">
+                                
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-box-archive mr-1.5"></i> Administrasi & Pengarsipan</h4>
+                                    <ul class="list-disc pl-5 space-y-2 text-xs text-slate-400">
+                                        <li><strong>Sita Kendaraan:</strong> Setelah pengecekan tuntas, lakukan eksekusi: <strong class="text-white">F1 → Police Interaction → Next Page → Impound Sita</strong>.</li>
+                                        <li><strong>Pencatatan MDT & Forum:</strong> Tindakan Impound Sita wajib terarsip di sistem MDT serta Threads Forum resmi. Tambahkan catatan jika ada tampering (manipulasi) atau kejanggalan lain.</li>
+                                        <li><strong>Website Putih (Impound Police):</strong> Masukkan seluruh foto evidence ke Website Putih pada bagian <strong class="text-white">Impound Police</strong>. Cantumkan nomor MDT kasus, deskripsi kendaraan, kronologi singkat, dan berkas foto.</li>
+                                        <li><strong>Pengecualian (Suspect Tertangkap):</strong> Apabila kendaraan digunakan dalam aksi perampokan / aktivitas ilegal lainnya dan suspect berhasil ditangkap, maka penyitaan kendaraan <span class="text-red-400 font-bold">TIDAK menggunakan Impound Police</span> melainkan wajib diproses melalui: <strong class="text-white">IMPOUND VEHICLE PUBLIC</strong>.</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Note Box -->
+                                <div class="bg-amber-950/40 p-4 rounded border border-amber-800 text-amber-200 text-xs flex items-start space-x-3">
+                                    <i class="fa-solid fa-circle-exclamation text-lg text-amber-500 mt-0.5"></i>
+                                    <div>
+                                        <strong class="block mb-1 font-bold uppercase">Peringatan Penting:</strong>
+                                        <span>PENGGUNAAN IMPOUND POLICE DAN IMPOUND VEHICLE PUBLIC HARUS DISESUAIKAN DENGAN JENIS KASUS DAN STATUS PENANGANAN SUSPECT.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW SECTION: Prosedur Pengeluaran Kendaraan -->
+                    <div class="bg-lspd-dark border border-slate-700 rounded-xl overflow-hidden">
+                        <button class="accordion-button w-full px-6 py-4 flex justify-between items-center hover:bg-lspd-card transition focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-lg text-white"><i class="fa-solid fa-key text-green-400 mr-3"></i>Prosedur Pengeluaran Kendaraan (Release Vehicle)</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content bg-lspd-navy">
+                            <div class="p-6 text-slate-300 space-y-4 text-sm">
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-id-card mr-1.5"></i> 1. Verifikasi Identitas & Berkas</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs text-slate-400">
+                                        <li>Minta dokumen identitas warga yang ingin mengambil kendaraan.</li>
+                                        <li>Minta Plate Number kendaraan yang dimaksud.</li>
+                                        <li>Lakukan cross-check menyeluruh terhadap riwayat warga, catatan kriminal warga, riwayat kendaraan, serta catatan khusus kendaraan melalui <strong class="text-white">MDT</strong> dan <strong class="text-white">Website Putih (bagian Impound Police)</strong>.</li>
+                                    </ul>
+                                </div>
+                                
+                                <hr class="border-slate-700">
+                                
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-clipboard-user mr-1.5"></i> 2. Pemeriksaan Dokumen Catatan (Notes)</h4>
+                                    <p class="text-xs text-slate-400 mb-2">
+                                        Petugas <strong class="text-white">WAJIB</strong> membaca bagian NOTES yang tertera pada profile warga, profile kendaraan, sistem MDT, serta arsip website.
+                                    </p>
+                                    <div class="bg-slate-900/60 p-3 rounded border border-slate-700 text-xs text-slate-300">
+                                        <p class="font-bold text-red-400 mb-1">CONTOH KASUS:</p>
+                                        <p class="text-slate-400">Apabila kendaraan terkait dengan kasus narkotika dan memiliki instruksi catatan tidak boleh dikeluarkan sampai tanggal tertentu, maka:</p>
+                                        <p class="text-white font-bold mt-1">⚠️ JANGAN mengeluarkan kendaraan tanpa adanya persetujuan resmi dari Incident Commander (IC) yang menangani kasus tersebut.</p>
+                                    </div>
+                                </div>
+                                
+                                <hr class="border-slate-700">
+                                
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-shield-virus mr-1.5"></i> 3. Status BOLO & Penyelesaian Tanggungan</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs text-slate-400">
+                                        <li>Pastikan kendaraan tidak berstatus <strong class="text-red-400">BOLO</strong> (Be On the Look Out).</li>
+                                        <li>Jika kendaraan terdeteksi berstatus BOLO, ikuti instruksi ketat pada Incident MDT yang berkaitan.</li>
+                                        <li>Selesaikan seluruh kewajiban administrasi hukum yang tercantum dalam MDT (seperti pembayaran denda yang tertunggak atau penyelesaian kasus bersangkutan).</li>
+                                    </ul>
+                                </div>
+                                
+                                <hr class="border-slate-700">
+                                
+                                <div>
+                                    <h4 class="text-lspd-gold font-bold mb-2"><i class="fa-solid fa-circle-check mr-1.5"></i> 4. Penyerahan Kendaraan & Biaya Regulasi</h4>
+                                    <p class="text-xs text-slate-400 mb-2">
+                                        Apabila seluruh pemeriksaan berkas warga dan kendaraan dinyatakan bersih dan valid:
+                                    </p>
+                                    <ul class="list-decimal pl-5 space-y-1 text-xs text-slate-300">
+                                        <li>Sebelum diserahkan, lakukan pemeriksaan fisik ulang pada bagian <strong class="text-white">Trunk</strong> and <strong class="text-white">Glove Box</strong>.</li>
+                                        <li>Tagihkan denda biaya regulasi resmi pengeluaran kendaraan sita sebesar: <span class="text-green-400 font-bold">$5,000</span>.</li>
+                                        <li>Setelah seluruh rangkaian transaksi selesai, berikan kembali kunci kendaraan kepada warga tersebut.</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Note Box -->
+                                <div class="bg-red-950/40 p-4 rounded border border-red-800 text-red-200 text-xs flex items-start space-x-3">
+                                    <i class="fa-solid fa-triangle-exclamation text-lg text-red-500 mt-0.5"></i>
+                                    <div>
+                                        <strong class="block mb-1 font-bold uppercase">Peringatan Penting:</strong>
+                                        <span>PASTIKAN NOTES, STATUS BOLO, DAN CATATAN MDT TELAH DIPERIKSA SECARA MENYELURUH SEBELUM KENDARAAN DIKELUARKAN.</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1236,7 +1385,7 @@
                         <button onclick="document.getElementById('police-weapons').scrollIntoView({behavior:'smooth'})" class="px-4 py-2 bg-lspd-dark border border-slate-600 rounded-lg text-sm font-bold text-slate-300 hover:text-white hover:border-blue-500 transition flex items-center shadow-md">
                             <i class="fa-solid fa-shield-halved mr-2 text-blue-400"></i> Police Weapons
                         </button>
-                        <button onclick="document.getElementById('criminal-weapons').scrollIntoView({behavior:'smooth'})" class="px-4 py-2 bg-lspd-dark border border-slate-600 rounded-lg text-sm font-bold text-slate-300 hover:text-white hover:border-red-500 transition flex items-center shadow-md">
+                        <button onclick="document.getElementById('criminal-weapons').scrollIntoView({behavior:'smooth'})" class="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-sm font-bold text-slate-300 hover:text-white hover:border-red-500 transition flex items-center shadow-md">
                             <i class="fa-solid fa-gun mr-2 text-red-400"></i> Criminal Weapons
                         </button>
                     </div>
@@ -1501,8 +1650,21 @@
                         <div class="relative">
                             <div class="absolute -left-[38px] w-8 h-8 bg-lspd-navy rounded-full flex items-center justify-center border-2 border-lspd-gold text-lspd-gold font-bold z-10">1</div>
                             <div class="bg-lspd-navy p-5 rounded-lg border border-slate-600">
-                                <h4 class="text-white font-bold text-base mb-2">Penggeledahan (Frisk & Search)</h4>
-                                <p class="text-slate-400">Bawa suspect ke sel tahanan Alta/MRPD. Dokumentasikan identity card suspect. Sita and dokumentasikan semua barang ilegal (senjata api, narkotika, dirty money) and barang berbahaya lainnya (seperti pisau, alat lockpick, dll) ke dalam locker barang bukti.</p>
+                                <h4 class="text-white font-bold text-base mb-2">Penanganan Awal di Station</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-slate-400">
+                                    <li>Setelah tiba di station, segera bawa suspect ke <strong class="text-white">Sel Tahanan (Holding Cell)</strong> atau <strong class="text-white">Ward</strong>.</li>
+                                    <li>Jika terdapat banyak suspect, tempatkan mereka di area station yang lebih luas agar proses pemeriksaan berjalan dengan tertib.</li>
+                                </ul>
+                                
+                                <div class="mt-3 p-3 bg-red-950/30 rounded border border-red-900 text-xs text-slate-300">
+                                    <strong class="text-red-400 block mb-1"><i class="fa-solid fa-heart-pulse mr-1"></i> Penanganan Suspect Pingsan / Cedera:</strong>
+                                    <ol class="list-decimal pl-4 space-y-1 text-slate-400">
+                                        <li>Segera panggil petugas <strong class="text-white">EMS</strong> dan lakukan tindakan pertolongan pertama <strong class="text-white">BLS (Basic Life Support)</strong> sesuai SOP.</li>
+                                        <li>Lakukan pemeriksaan residu tembakan melalui <strong class="text-white">GSR Test</strong>.</li>
+                                        <li><strong>Sebelum suspect dibangunkan/pulih:</strong> Ambil foto seluruh barang bawaan suspect secara jelas serta foto hasil GSR Test sebagai lembar bukti (*evidence*).</li>
+                                        <li>Setelah penanganan medis selesai oleh EMS, biarkan suspect menyelesaikan administrasi pengobatan, borgol kembali suspect secara rapat, kemudian <strong class="text-white">segera bacakan Miranda Rights</strong>.</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                         
@@ -1510,8 +1672,14 @@
                         <div class="relative">
                             <div class="absolute -left-[38px] w-8 h-8 bg-lspd-navy rounded-full flex items-center justify-center border-2 border-lspd-gold text-lspd-gold font-bold z-10">2</div>
                             <div class="bg-lspd-navy p-5 rounded-lg border border-slate-600">
-                                <h4 class="text-white font-bold text-base mb-2">Interogasi</h4>
-                                <p class="text-slate-400">Tanyakan motif kejahatan tersangka, asal muasal kepemilikan barang ilegal, atau informasi jaringan sindikat kriminal yang berafiliasi.</p>
+                                <h4 class="text-white font-bold text-base mb-2">Penggeledahan dan Penyitaan</h4>
+                                <p class="text-slate-400 mb-2">Lakukan tindakan penggeledahan fisik secara menyeluruh pada badan suspect serta tas atau barang bawaan yang dibawa.</p>
+                                <ul class="list-disc pl-5 text-xs text-slate-400 space-y-1 mb-3">
+                                    <li>Sita seluruh barang ilegal yang ditemukan di tubuh/tas tersangka, termasuk: <strong class="text-white">Senjata ilegal, Narkoba, Uang Merah (Dirty Money), serta Barang Ilegal Lainnya</strong>.</li>
+                                    <li>Ambil dokumentasi foto yang jelas pada semua barang bukti yang disita.</li>
+                                    <li>Input data berkas foto bukti sitaan tersebut ke dalam sistem MDT sesuai ID Kejadian (*incident*) yang ditangani.</li>
+                                </ul>
+                                <p class="text-xs text-slate-400 italic bg-slate-800 p-2 rounded">※ Setelah penyitaan rampung, lepaskan borgol tersangka sementara waktu dan perintahkan tersangka untuk melepaskan topi, masker, kacamata, atau penutup wajah lainnya yang menghalangi visual.</p>
                             </div>
                         </div>
                         
@@ -1519,8 +1687,19 @@
                         <div class="relative">
                             <div class="absolute -left-[38px] w-8 h-8 bg-lspd-navy rounded-full flex items-center justify-center border-2 border-lspd-gold text-lspd-gold font-bold z-10">3</div>
                             <div class="bg-lspd-navy p-5 rounded-lg border border-slate-600">
-                                <h4 class="text-white font-bold text-base mb-2">Mobile Data Terminal (MDT)</h4>
-                                <p class="text-slate-400">Masuk ke sistem MDT. Masukkan laporan tersangka yang kamu proses di MDT sesuai ID Kejadian. Cantumkan nama lengkap tersangka, bukti foto (mugshot & evidence), daftar pasal (Charges) yang dilanggar, kalkulasi denda, serta jumlah durasi penjara (Months). <strong class="text-lspd-gold">Jika Anda ragu, tanyakan/koordinasikan langsung ke IC atau supervisor yang bertugas.</strong></p>
+                                <h4 class="text-white font-bold text-base mb-2">Verifikasi Identitas &amp; Mugshot</h4>
+                                <p class="text-slate-400 mb-2">Minta tersangka untuk menunjukkan ID Card resmi miliknya, lalu ambil dokumentasi foto ID Card tersebut.</p>
+                                
+                                <div class="bg-slate-900/60 p-3 rounded border border-slate-700 text-xs text-slate-300 mb-3">
+                                    <strong class="text-lspd-gold block mb-1"><i class="fa-solid fa-fingerprint mr-1"></i> SOP Fingerprint (Bila suspect tidak membawa ID):</strong>
+                                    <ol class="list-decimal pl-4 space-y-1 text-slate-400">
+                                        <li>Tuntun tersangka menuju ke meja mesin fingerprint.</li>
+                                        <li>Masukkan nomor kantong (<strong class="text-white">Pocket Number</strong>) tersangka ke sistem mesin.</li>
+                                        <li>Bila mesin menampilkan kode identifikasi unik, salin berkas kode tersebut dan ambil foto kode fingerprint sebagai evidence valid.</li>
+                                        <li>Buka terminal MDT, akses menu <strong class="text-white">Profile</strong>, lalu masukkan kode fingerprint tadi ke kolom pencarian untuk melihat identitas asli pemilik kode.</li>
+                                    </ol>
+                                </div>
+                                <p class="text-slate-400 text-xs">Serahkan papan identitas mugshot kepada tersangka, posisikan tersangka membelakangi dinding pengukur tinggi badan, lalu ambil foto mugshot resmi sesuai ketentuan LSPD.</p>
                             </div>
                         </div>
                         
@@ -1528,17 +1707,78 @@
                         <div class="relative">
                             <div class="absolute -left-[38px] w-8 h-8 bg-lspd-navy rounded-full flex items-center justify-center border-2 border-lspd-gold text-lspd-gold font-bold z-10">4</div>
                             <div class="bg-lspd-navy p-5 rounded-lg border border-slate-600">
-                                <h4 class="text-white font-bold text-base mb-2">Penahanan</h4>
-                                <p class="text-slate-400 mb-2">Sebelum menjatuhkan vonis penjara (*jail*), tanyakan kepada tersangka apakah mereka mengajukan pembelaan bersalah atau tidak:</p>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                                    <div class="bg-red-950/40 p-3 rounded border border-red-900">
-                                        <strong class="text-red-400 block mb-1">Guilty (Mengaku Bersalah):</strong>
-                                        <p class="text-xs text-slate-300">Dapat langsung diproses kurung penjara di tempat (Alta/MRPD) atau panggil pihak DOC (Department of Corrections) jika hukuman masif.</p>
-                                    </div>
-                                    <div class="bg-blue-950/40 p-3 rounded border border-blue-900">
-                                        <strong class="text-blue-400 block mb-1">Not Guilty (Menyangkal):</strong>
-                                        <p class="text-xs text-slate-300">Maka tersangka berhak meminta kehadiran pengacara (Lawyer) atau melimpahkan kasus ke persidangan resmi (Court Verdict).</p>
-                                    </div>
+                                <h4 class="text-white font-bold text-base mb-2">Pengisian MDT, Pembacaan, &amp; Pembayaran</h4>
+                                <ol class="list-decimal pl-4 space-y-2 text-xs text-slate-400">
+                                    <li><strong class="text-white">Input Laporan MDT:</strong> Akses menu <strong class="text-white">Incident</strong> di MDT, cari laporan kejadian aktif Anda, masuk ke kolom <strong class="text-white">Criminal</strong>, tekan tombol <strong class="text-white">(+)</strong> untuk menambahkan nama tersangka.</li>
+                                    <li><strong class="text-white">Handle Charge:</strong> Masukkan draf tuntutan (<strong class="text-white">Penal Codes</strong>) tersangka berdasarkan arahan/diskresi Incident Commander (IC). Verifikasi keakuratan charge sebelum disimpan.</li>
+                                    <li><strong class="text-white">Pembacaan Tuntutan:</strong> Bacakan pasal Penal Code yang dilanggar, total denda, serta draf total masa tahanan kepada tersangka, kemudian tanyakan pembelaan mereka: <strong class="text-red-400">Plead Guilty</strong> atau <strong class="text-blue-400">Not Guilty</strong>.</li>
+                                    <li><strong class="text-white">Mekanisme Pembayaran Denda (Jika Plead Guilty):</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Tekan tombol <strong class="text-white">Send Fine</strong> di MDT. Setelah dikirim, centang tanda <strong class="text-white">Processed</strong> dan <strong class="text-white">Plead Guilty</strong> di database profile tersangka.</li>
+                                            <li><strong class="text-white">Alternatif Tablet (F1):</strong> Buka Tablet (F1) → Pilih <strong class="text-white">Billing</strong> → Masukkan nomor kantong tersangka → Masukkan nominal denda sesuai kalkulasi MDT.</li>
+                                            <li><strong class="text-white font-bold text-yellow-500">PENTING:</strong> Transaksi denda wajib ditransfer lewat rekening bank. Dilarang keras menerima pembayaran tunai (Cash).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong class="text-white">Verifikasi Pembayaran:</strong> Masuk ke tab <strong class="text-white">Billing History</strong> untuk melihat status pembayaran. Bila denda belum terbayar lunas, gunakan instruksi tindakan <strong class="text-white">Force Pay</strong> dari profile data billing tersangka.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="relative">
+                            <div class="absolute -left-[38px] w-8 h-8 bg-lspd-navy rounded-full flex items-center justify-center border-2 border-lspd-gold text-lspd-gold font-bold z-10">5</div>
+                            <div class="bg-lspd-navy p-5 rounded-lg border border-slate-600">
+                                <h4 class="text-white font-bold text-base mb-2">Pengiriman ke Penjara (Jail System)</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-xs text-slate-400">
+                                    <li>Hubungi petugas <strong class="text-white">DOC (Department of Corrections) Central atau DOC Lokal</strong> untuk melakukan proses pengawalan (*escort*) tersangka menuju ke penjara.</li>
+                                    <li>Apabila tersangka merupakan status <strong class="text-white text-blue-400">Court Verdict</strong> (meminta pengacara/menunggu sidang), prioritaskan koordinasi pemanggilan unit <strong class="text-white font-bold text-blue-400">DOC Central</strong> untuk melakukan penjemputan pengawalan.</li>
+                                    <li>Jika kondisi lapangan sedang kosong dan tidak ada petugas DOC yang bertugas/merespon, lakukan proses pemenjaraan mandiri secara aman melalui <strong class="text-white">MDT Jail System</strong> atau gunakan perintah teks perintah administratif <strong class="text-white">/jail</strong> sesuai dengan regulasi SOP server.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW SUBSECTION: CATATAN PENTING PENGGUNAAN MDT -->
+                    <div class="mt-8 bg-slate-900 border border-slate-700 rounded-xl p-6 shadow-inner">
+                        <h3 class="text-lg font-bold text-lspd-gold mb-4 flex items-center">
+                            <i class="fa-solid fa-server mr-2.5"></i> Catatan Penting Penggunaan MDT
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                            <div class="bg-slate-800/60 p-4 rounded border border-slate-700 space-y-3">
+                                <div>
+                                    <strong class="text-white block mb-1">1. Pembacaan Denda &amp; Masa Tahanan</strong>
+                                    <span class="text-slate-400 leading-relaxed block">
+                                        Nominal denda wajib dibacakan secara penuh tanpa dipotong atau disederhanakan. 
+                                        <br>Contoh: <strong class="text-white">$24,562</strong> wajib dibacakan sebagai <span class="italic text-lspd-gold">"Dua puluh empat ribu lima ratus enam puluh dua dolar."</span>
+                                        <br>Masa tahanan (Contoh: <strong class="text-white">90 bulan</strong>) juga wajib dibacakan dengan jelas. Pengurangan masa kurungan hanya boleh disetujui atas instruksi langsung dari IC apabila berhak menerima keringanan.
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1">2. Ketentuan Tuntutan Saling Tumpuk (Stacking Charge)</strong>
+                                    <span class="text-slate-400 leading-relaxed block">
+                                        Satu draf tuntutan (Charge) hanya dihitung satu kali untuk satu tindak kejahatan yang terpisah. Namun, apabila tersangka membawa barang bukti ilegal atau melakukan pelanggaran kategori sejenis lebih dari satu barang bukti, maka draf tuntutan <strong class="text-white">dapat ditumpuk (di-stack)</strong> sesuai jumlah temuan di tubuh tersangka. 
+                                        <br>Contoh: Membawa dua unit senjata ilegal berkategori sama akan diinput sebanyak <strong class="text-white">2x Stacking Charge</strong>.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-800/60 p-4 rounded border border-slate-700 space-y-3">
+                                <div>
+                                    <strong class="text-white block mb-1">3. Aturan Tanda Status (Warrant, Processed &amp; Plead Guilty)</strong>
+                                    <span class="text-slate-400 leading-relaxed block">
+                                        Ikuti matriks kontrol status record MDT ini secara akurat:
+                                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                                            <li><strong class="text-white">WARRANT:</strong> Aktifkan hanya jika tersangka merupakan buron terdaftar, target DPO, atau memiliki surat perintah penangkapan aktif dari pengadilan.</li>
+                                            <li><strong class="text-white">PROCESSED &amp; PLEAD GUILTY:</strong> Centang status ini bila tersangka sudah selesai diproses, mengakui perbuatannya, dan denda administrasinya telah lunas dibayarkan.</li>
+                                            <li><strong class="text-white">HANYA PROCESSED:</strong> Centang status ini jika tersangka sudah selesai diproses di station namun menolak mengaku bersalah (<strong class="text-blue-400">Not Guilty</strong>) dan memilih untuk melimpahkan kasus ke persidangan (*court verdict*).</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1">4. Penanganan Tanpa Petugas DOC</strong>
+                                    <span class="text-slate-400 leading-relaxed block">
+                                        Jika tidak ada unit DOC di kota, laksanakan proses pengiriman sel penjara mandiri menggunakan terminal <strong class="text-white">Jail System pada MDT</strong> atau gunakan eksekusi teks perintah <strong class="text-white">/jail</strong> sesuai dengan kebijakan kota.
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -1755,6 +1995,117 @@
                     </div>
                 </div>
 
+                <!-- ROW 2: ADDITIONAL PENAL CODES AND REFERENCES -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <!-- Ammunition & Bulletproof Vest Card -->
+                    <div class="bg-lspd-dark rounded-xl border border-slate-700 shadow-lg overflow-hidden flex flex-col h-full">
+                        <div class="bg-slate-700/60 p-4 border-b border-slate-600 flex items-center">
+                            <i class="fa-solid fa-boxes-stacked text-2xl text-slate-300 mr-3"></i>
+                            <h3 class="text-lg font-bold text-white">Ammunition &amp; Vests</h3>
+                        </div>
+                        <div class="p-5 flex-1 space-y-4 text-sm overflow-x-auto">
+                            <div class="border-b border-slate-700 pb-3">
+                                <h4 class="text-lspd-gold font-bold">Ammunition Codes</h4>
+                                <ul class="list-none text-xs text-slate-300 mt-1 space-y-2.5">
+                                    <li>
+                                        <strong class="text-white block font-semibold">Unlawful Possession of Ammunition:</strong>
+                                        <span class="text-slate-400 block">- Membawa total amunisi kurang dari 300 butir (berlaku seluruh jenis amunisi).</span>
+                                    </li>
+                                    <li>
+                                        <strong class="text-white block font-semibold">Illegal Distribution of Ammunition:</strong>
+                                        <span class="text-slate-400 block">- Membawa total amunisi 300 butir s/d 2000 butir.</span>
+                                    </li>
+                                    <li>
+                                        <strong class="text-white block font-semibold">Ammunition Smuggling <span class="bg-red-500 text-white text-[9px] font-bold px-1 rounded ml-1">COURT VERDICT</span>:</strong>
+                                        <span class="text-slate-400 block">- Membawa total amunisi lebih dari 2000 butir.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lspd-gold font-bold">Bulletproof Vest Codes</h4>
+                                <ul class="list-none text-xs text-slate-300 mt-1 space-y-2.5">
+                                    <li>
+                                        <strong class="text-white block font-semibold">Misdemeanor Possession of Bulletproof Vest:</strong>
+                                        <span class="text-slate-400 block">- Membawa kurang dari 10 vest.</span>
+                                    </li>
+                                    <li>
+                                        <strong class="text-white block font-semibold">Felony Possession of Bulletproof Vest <span class="bg-red-500 text-white text-[9px] font-bold px-1 rounded ml-1">COURT VERDICT</span>:</strong>
+                                        <span class="text-slate-400 block">- Membawa 10 vest atau lebih.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Narcotics Details & Manufacturing Card -->
+                    <div class="bg-lspd-dark rounded-xl border border-slate-700 shadow-lg overflow-hidden flex flex-col h-full">
+                        <div class="bg-purple-950/40 p-4 border-b border-purple-900 flex items-center">
+                            <i class="fa-solid fa-flask text-2xl text-purple-400 mr-3"></i>
+                            <h3 class="text-lg font-bold text-white">Narcotics &amp; Manufacturing</h3>
+                        </div>
+                        <div class="p-5 flex-1 space-y-3 text-sm overflow-y-auto max-h-[450px]">
+                            <div class="border-b border-slate-700 pb-2">
+                                <h4 class="text-purple-300 font-bold text-xs">Schedule I Possession (Weed / Opium)</h4>
+                                <p class="text-[11px] text-slate-400 mt-0.5"><strong>Misdemeanor:</strong> Total kurang dari 60 gram.</p>
+                                <p class="text-[11px] text-slate-400"><strong>Felony:</strong> Total lebih dari 60 gram.</p>
+                            </div>
+                            <div class="border-b border-slate-700 pb-2">
+                                <h4 class="text-purple-300 font-bold text-xs">Schedule II Possession (Meth / Cocaine)</h4>
+                                <p class="text-[11px] text-slate-400 mt-0.5"><strong>Misdemeanor:</strong> Total kurang dari 100 gram.</p>
+                                <p class="text-[11px] text-slate-400"><strong>Felony:</strong> Total lebih dari 100 gram.</p>
+                            </div>
+                            <div class="border-b border-slate-700 pb-2">
+                                <h4 class="text-purple-300 font-bold text-xs">Bulk Distribution &amp; Smuggling</h4>
+                                <p class="text-[11px] text-slate-400 mt-0.5"><strong>Distribution of Schedule:</strong> Total seluruh narkotika &gt; 800 gram.</p>
+                                <p class="text-[11px] text-slate-400"><strong>Drug Smuggling:</strong> Total seluruh narkotika &gt; 2000 gram.</p>
+                                <p class="text-[11px] text-slate-400"><strong>Drug Trafficking:</strong> Total seluruh narkotika &gt; 4000 gram.</p>
+                            </div>
+                            <div class="border-b border-slate-700 pb-2">
+                                <h4 class="text-purple-300 font-bold text-xs">Possession of Drug Paraphernalia</h4>
+                                <p class="text-[11px] text-slate-300 leading-relaxed mt-0.5"><strong>Kategori Alat Produksi:</strong> Meth Oven, Meth Table, Bagging Table, Baggy, Planting Pot, Cannabis Seed, Weed, Phos, Pseudo, Acid, Liquid Meth, Meth.</p>
+                                <p class="text-[11px] text-slate-400 mt-1"><strong>Kategori A:</strong> kurang dari 10 item.</p>
+                                <p class="text-[11px] text-slate-400"><strong>Kategori B:</strong> 10 item atau lebih.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-purple-300 font-bold text-xs">Drug Manufacturing</h4>
+                                <p class="text-[11px] text-slate-400 mt-0.5">- Melakukan aktivitas proses produksi Schedule Controlled Substances (berlaku untuk kedua kategori narkotika).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Offenses & Hostages Card -->
+                    <div class="bg-lspd-dark rounded-xl border border-slate-700 shadow-lg overflow-hidden flex flex-col h-full">
+                        <div class="bg-rose-950/40 p-4 border-b border-rose-900 flex items-center">
+                            <i class="fa-solid fa-triangle-exclamation text-2xl text-rose-400 mr-3"></i>
+                            <h3 class="text-lg font-bold text-white">Hostage &amp; Other Offenses</h3>
+                        </div>
+                        <div class="p-5 flex-1 space-y-4 text-sm overflow-x-auto">
+                            <div class="border-b border-slate-700 pb-3">
+                                <h4 class="text-rose-400 font-bold">Hostage Classification</h4>
+                                <ul class="list-disc pl-5 text-xs text-slate-300 mt-1 space-y-1">
+                                    <li><strong>Hostages:</strong> 1-2 Hostage.</li>
+                                    <li><strong>Aggravated Hostages:</strong> 3-4 Hostage.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 italic mt-1.5">*Klasifikasi ini digunakan untuk menentukan charge yang sesuai pada incident terkait penyanderaan.</p>
+                            </div>
+                            <div class="border-b border-slate-700 pb-3">
+                                <h4 class="text-rose-400 font-bold">Unauthorized Device</h4>
+                                <p class="text-xs text-white mt-1"><strong>Possession of Unauthorized Device (Hacking Device):</strong></p>
+                                <p class="text-xs text-slate-400 leading-relaxed">- Membawa alat/perangkat akses ilegal seperti Lockpick, Green Card, atau perangkat sejenis yang digunakan dalam tindak kriminal.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-rose-400 font-bold">Illegal Money Codes (Uang Merah)</h4>
+                                <ul class="list-none text-xs text-slate-300 mt-1 space-y-1.5">
+                                    <li><strong class="text-white">Minor Possession:</strong> Kurang dari $50,000.</li>
+                                    <li><strong class="text-white">Third Degree Possession:</strong> Sampai $149,999.</li>
+                                    <li><strong class="text-white">Second Degree Possession:</strong> Sampai $399,999.</li>
+                                    <li><strong class="text-white">First Degree Possession <span class="bg-red-500 text-white text-[9px] font-bold px-1 rounded ml-1">COURT VERDICT</span>:</strong> Lebih dari $400,000.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Watermark Footer -->
                 <div class="mt-12 pt-6 border-t border-slate-700/50 text-center text-slate-500 text-xs font-medium uppercase tracking-widest print-watermark">
                     Handbook Compiled by Pamanahrasa &copy; LSPD
@@ -1863,13 +2214,13 @@
 [lspdsubtitle=#11224E][b][b]First Report[/b][/b][/lspdsubtitle>
 
 [b]Date:[/b]
-[divbox=white] - [/divbox]
+[divbox=white] - [/divbox>
 
 [b]Details:[/b]
-[divbox=white] - [/divbox]
+[divbox=white] - [/divbox>
 
 [b]Evidence:[/b]
-[divbox=white] - [/divbox]
+[divbox=white] - [/divbox>
 
 [/divbox]</textarea>
                                 <button onclick="copyBBCode()" class="absolute bottom-4 right-4 bg-lspd-gold text-lspd-navy px-4 py-2 rounded font-bold text-xs hover:bg-lspd-goldHover shadow">
@@ -2157,6 +2508,19 @@
             });
         }
 
+        // Accordion Logic
+        function toggleAccordion(button) {
+            button.classList.toggle('active');
+            const content = button.nextElementSibling;
+            if (button.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.paddingTop = "0";
+                content.style.paddingBottom = "0";
+            } else {
+                content.style.maxHeight = null;
+            }
+        }
+
         function navigateSequential(direction) {
             if (direction === 'prev' && currentTabIndex > 0) {
                 switchTab(tabOrder[currentTabIndex - 1]);
@@ -2239,20 +2603,6 @@
 
             // Recalculate scroll indicators for newly opened tab
             setTimeout(updateAllScrollIndicators, 100);
-        }
-
-        // Accordion Logic
-        // Accordion Logic
-        function toggleAccordion(button) {
-            button.classList.toggle('active');
-            const content = button.nextElementSibling;
-            if (button.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + "px";
-                content.style.paddingTop = "0";
-                content.style.paddingBottom = "0";
-            } else {
-                content.style.maxHeight = null;
-            }
         }
 
         // Live Real-time Filtering for Abbreviations
@@ -2547,221 +2897,6 @@
             initScrollIndicators();
         }
 
-        function removeEvidenceField(buttonElement) {
-            const row = buttonElement.closest('.evidence-item');
-            if (row) {
-                row.remove();
-                generateBBCode();
-                initScrollIndicators();
-            }
-        }
-
-        // BBCode to HTML Translator for Live Preview Box
-        function bbcodeToHtml(text) {
-            if (!text) return '-';
-            let html = text;
-            // Clean up any remaining block wrappers
-            html = html.replace(/\[divbox=[^\]]*\]/gi, '');
-            html = html.replace(/\[\/divbox\]/gi, '');
-            html = html.replace(/\[lspdsubtitle=[^\]]*\]/gi, '');
-            html = html.replace(/\[\/lspdsubtitle\]/gi, '');
-            
-            // Convert simple linebreaks and tags
-            html = html.replace(/\n/g, '<br>');
-            html = html.replace(/\[b\]/gi, '<strong>');
-            html = html.replace(/\[\/b\]/gi, '</strong>');
-            return html;
-        }
-
-        // Generator BBCode Laporan Patroli (Combined with instant Live Preview update)
-        function generateBBCode() {
-            const name = document.getElementById('gen-name').value || 'Answer';
-            const station = document.getElementById('gen-station').value || 'Answer';
-            const rank = document.getElementById('gen-rank').value || 'Answer';
-            const badge = document.getElementById('gen-badge').value || 'Answer';
-            
-            const dateStr = document.getElementById('gen-date').value;
-            // Format tanggal jadi DD/MM/YYYY
-            let date = '-';
-            if(dateStr) {
-                const d = new Date(dateStr);
-                date = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
-            }
-
-            const rawDetails = document.getElementById('gen-details').value;
-            const details = rawDetails.trim() ? autoFormatDetails(rawDetails) : '-';
-
-            // Gather all entries from dynamic evidence inputs
-            const evidenceItems = document.querySelectorAll('.evidence-item');
-            let evidenceBBCode = '';
-            let previewEvidenceHtml = '';
-
-            evidenceItems.forEach(item => {
-                const evName = item.querySelector('.ev-name').value.trim();
-                const evUrl = item.querySelector('.ev-url').value.trim();
-
-                if (evName && evUrl) {
-                    evidenceBBCode += `[spoiler=${evName}]\n[img]${evUrl}[/img]\n[/spoiler]\n\n`;
-                    previewEvidenceHtml += `
-                        <details class="bg-white border rounded text-[9px] p-2 cursor-pointer mb-2" open>
-                            <summary class="font-bold text-blue-600 outline-none select-none">Spoiler: ${evName}</summary>
-                            <div class="mt-2 text-center bg-slate-50 p-2 rounded border border-slate-200">
-                                <img src="${evUrl}" alt="${evName}" class="max-w-full h-auto rounded border shadow-sm mx-auto max-h-48" onerror="this.src='https://placehold.co/400x200/1e293b/eab308?text=Image+Format+Unreachable'">
-                                <span class="text-slate-400 text-[8px] italic mt-1 block select-all">${evUrl}</span>
-                            </div>
-                        </details>
-                    `;
-                }
-            });
-
-            // Fallback if no evidence provided
-            if (!evidenceBBCode.trim()) {
-                evidenceBBCode = '-';
-            } else {
-                evidenceBBCode = evidenceBBCode.trim();
-            }
-
-            const template = `[divbox=white]
-[center][img]https://i.vgy.me/IhV1jB.png[/img][/center]
-[/divbox]
-[divbox=darkblue]
-[size=150][center][b][color=#FFFFFF]Los Santos Police Department [/color][/b][/center][/size]
-[/divbox]
-
-[divbox=white]
-[center][b][size=120]PATROL REPORT[/size][/b][/center][/divbox]
-[lspdsubtitle=#11224E][b]A. GENERAL INFORMATION[/b][/lspdsubtitle]
-[divbox=white]
-[b]Officer Name :[/b] ${name}
-[b]Station :[/b] ${station}
-[b]Rank :[/b] ${rank}
-[b]Badge Number :[/b] ${badge}
-[/divbox]
-
-[lspdsubtitle=#11224E][b]B. PATROL REPORT OFFICER[/b][/lspdsubtitle]
-[divbox=white]
-[lspdsubtitle=#11224E][b][b]First Report[/b][/b][/lspdsubtitle>
-
-[b]Date:[/b]
-[divbox=white] ${date} [/divbox]
-
-[b]Details:[/b]
-[divbox=white] ${details} [/divbox]
-
-[b]Evidence:[/b]
-[divbox=white] 
-${evidenceBBCode}
-[/divbox]
-
-[/divbox]`;
-
-            document.getElementById('bbcode-template').value = template;
-
-            // --- BUILD DYNAMIC LIVE PREVIEW (Synchronized instant layout) ---
-            let livePreviewHtml = `
-                <div class="flex justify-center mb-3">
-                    <img src="https://i.vgy.me/IhV1jB.png" alt="LSPD Logo" class="h-14">
-                </div>
-                
-                <div class="bg-[#11224E] text-white font-bold p-1.5 text-center text-xs uppercase tracking-wide mb-3 rounded-sm">
-                    Los Santos Police Department
-                </div>
-                
-                <div class="text-center font-bold text-xs mb-3 border-b pb-1 text-slate-900">
-                    PATROL REPORT
-                </div>
-            `;
-
-            // Section A: General Info (Hide elements intelligently if empty)
-            const showName = document.getElementById('gen-name').value.trim();
-            const showStation = document.getElementById('gen-station').value.trim();
-            const showRank = document.getElementById('gen-rank').value.trim();
-            const showBadge = document.getElementById('gen-badge').value.trim();
-
-            if (showName || showStation || showRank || showBadge) {
-                livePreviewHtml += `
-                    <div class="bg-[#11224E] text-white font-bold px-2 py-0.5 text-[10px] mb-1.5 rounded-sm">
-                        A. GENERAL INFORMATION
-                    </div>
-                    <div class="border p-2.5 mb-3 space-y-1 bg-slate-50 rounded text-slate-800 text-[11px]">
-                `;
-                if (showName) livePreviewHtml += `<p><strong>Officer Name :</strong> ${showName}</p>`;
-                if (showStation) livePreviewHtml += `<p><strong>Station :</strong> ${showStation}</p>`;
-                if (showRank) livePreviewHtml += `<p><strong>Rank :</strong> ${showRank}</p>`;
-                if (showBadge) livePreviewHtml += `<p><strong>Badge Number :</strong> ${showBadge}</p>`;
-                livePreviewHtml += `</div>`;
-            }
-
-            // Section B: Report Details
-            const showDate = document.getElementById('gen-date').value;
-            const showDetails = rawDetails.trim();
-
-            if (showDate || showDetails || previewEvidenceHtml) {
-                livePreviewHtml += `
-                    <div class="bg-[#11224E] text-white font-bold px-2 py-0.5 text-[10px] mb-1.5 rounded-sm">
-                        B. PATROL REPORT OFFICER
-                    </div>
-                    <div class="border p-2.5 bg-slate-50 rounded text-slate-800 text-[11px]">
-                        <div class="bg-[#11224E] text-white font-bold px-2 py-0.5 text-[9px] mb-2 inline-block rounded">
-                            First Report
-                        </div>
-                `;
-
-                if (showDate) {
-                    livePreviewHtml += `<p class="mb-1"><strong>Date:</strong> ${date}</p>`;
-                }
-
-                if (showDetails) {
-                    livePreviewHtml += `
-                        <p class="mb-1"><strong>Details:</strong></p>
-                        <div class="text-slate-600 bg-white p-2 border rounded leading-relaxed text-[10px] italic mb-2">
-                            ${bbcodeToHtml(details)}
-                        </div>
-                    `;
-                }
-
-                if (previewEvidenceHtml) {
-                    livePreviewHtml += `
-                        <p class="mb-1"><strong>Evidence:</strong></p>
-                        <div class="mt-1 space-y-1">
-                            ${previewEvidenceHtml}
-                        </div>
-                    `;
-                }
-
-                livePreviewHtml += `</div>`;
-            }
-
-            document.getElementById('live-preview-box').innerHTML = livePreviewHtml;
-        }
-
-        // Copy BBCode Function with execCommand fallback
-        function copyBBCode() {
-            const textarea = document.getElementById('bbcode-template');
-            textarea.select();
-            textarea.setSelectionRange(0, 99999);
-            
-            try {
-                document.execCommand('copy');
-                showToast("BBCode Berhasil Disalin!");
-            } catch (err) {
-                showToast("Gagal menyalin BBCode.");
-            }
-        }
-
-        // Toast Handler
-        function showToast(message) {
-            const toast = document.getElementById("toast");
-            toast.innerText = message;
-            toast.className = "show";
-            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
-        }
-
-        // Initialize sequential navigation buttons on load
-        injectSectionNavigation();
-        updateNavigationButtons();
-        initScrollIndicators();
-
         // Also call on window load for complete calculation security
         window.addEventListener('load', function() {
             initScrollIndicators();
@@ -2772,3 +2907,5 @@ ${evidenceBBCode}
     </script>
 </body>
 </html>
+
+```
